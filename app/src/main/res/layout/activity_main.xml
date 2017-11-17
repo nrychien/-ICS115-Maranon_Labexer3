@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="330dp"
+    android:layout_height="match_parent"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="40dp"
+    tools:context="com.maranon.maranon_labexer3.MainActivity">
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etData"
+        android:layout_alignBottom="@+id/etData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Data:"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvDisplay"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etData"
+        android:layout_marginTop="24dp"
+        android:text="Filename:"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDisplay"
+        android:layout_alignBottom="@+id/tvDisplay"
+        android:layout_alignLeft="@+id/etData"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/etData"
+        android:ems="10"
+        android:hint="*.txt"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnViewSharedPrefs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFilename"
+        android:layout_marginTop="14dp"
+        android:fontFamily="monospace"
+        android:onClick="saveSharedPrefs"
+        android:text="Shared Preferences"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewIntStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewSharedPrefs"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="saveIntStorage"
+        android:text="Internal Storage"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewIntCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewIntStorage"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="saveIntCache"
+        android:text="Internal Cache"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewExtCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewIntCache"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="saveExtCache"
+        android:text="External Cache"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewExtStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewExtCache"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="saveExtStorage"
+        android:text="External Storage"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnExtPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewExtStorage"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="saveExtPublic"
+        android:text="External Public Storage"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="goToDisplay"
+        android:text="Next"
+        android:textSize="18sp" />
+
+</RelativeLayout>

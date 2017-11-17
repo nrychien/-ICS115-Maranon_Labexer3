@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="330dp"
+    android:layout_height="match_parent"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="40dp"
+    tools:context="com.maranon.maranon_labexer3.Display">
+
+    <TextView
+        android:id="@+id/tvViewFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:text="Filename:"
+        android:textAllCaps="true"
+        android:textStyle="bold" />"/>
+
+    <EditText
+        android:id="@+id/etViewFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvViewFilename"
+        android:layout_alignBottom="@+id/tvViewFilename"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_toRightOf="@+id/tvViewFilename"
+        android:ems="10"
+        android:hint="*.txt"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/etViewData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etViewFilename"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="***data goes here***"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewSharedPrefs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etViewData"
+        android:layout_marginTop="44dp"
+        android:fontFamily="monospace"
+        android:onClick="vSharedPrefs"
+        android:text="Shared Preferences"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewIntStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnViewSharedPrefs"
+        android:layout_alignStart="@+id/btnViewSharedPrefs"
+        android:layout_below="@+id/btnViewSharedPrefs"
+        android:fontFamily="monospace"
+        android:onClick="vIntStorage"
+        android:text="Internal Storage"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewExtStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewExtCache"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="vExtStorage"
+        android:text="External Storage"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewIntCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewIntStorage"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="vIntCache"
+        android:text="Internal Cache"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewExtCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewIntCache"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="vExtCache"
+        android:text="External Cache"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnViewExtPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewExtStorage"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:onClick="vExtPublic"
+        android:text="External Public Storage"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="goToMainActivity"
+        android:text="Previous"
+        android:textSize="18sp" />
+
+</RelativeLayout>
